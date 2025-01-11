@@ -72,12 +72,56 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: space-between;
   padding: 50px;
-  background-image: url('votre-image.jpg'); /* Remplacez par le lien de votre image */
-  background-size: cover;
-  background-position: center;
+
+ 
+  background-image: url('./Img/logocropped.png'); 
+  background-size: contain;
+  background-position: -300px 100px; 
   background-repeat: no-repeat;
+
+ 
+  background-color: #c0f9f1; 
 }
 
+@media (max-width: 768px) {
+  .platform-info {
+    flex-direction: column;
+    padding: 20px;
+    background-position: center center;
+  }
+  
+  .platform-info h2, .platform-info p {
+    text-align: center;
+  }
+
+  .platform-info {
+    background-size: cover; 
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .platform-info {
+    padding: 30px;
+    background-position: -150px 50px; 
+  }
+
+  .platform-info h2, .platform-info p {
+    text-align: left; 
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .platform-info {
+    padding: 50px;
+    background-position: -300px 100px;
+  }
+
+  .platform-info h2, .platform-info p {
+    text-align: left; 
+  }
+}
 .text {
   flex: 1;
   text-align: left;
@@ -93,24 +137,28 @@ h1, h2, h3, h4 {
 .stat {
   flex: 0 0 45%;
   padding: 20px;
-  border: 2px solid #ddd; /* Ajoute des bordures aux blocs */
+  border: 2px solid #ddd;
   margin: 10px;
-  background-color: #fff; /* Ajoute une couleur de fond pour les blocs */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour les blocs */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 .custom-title2 {
     color: #00b39b;
     font-weight: normal;
     padding-bottom: 25px;
+    padding-top: 90px;
+}
+.paragraph {
+  padding-bottom: 50px;
 }
 .city-cards {
     display: flex;
-    flex-wrap: wrap; /* Permet de passer à la ligne suivante lorsque nécessaire */
-    gap: 20px; /* Espace entre les cartes */
+    flex-wrap: wrap;
+    gap: 20px; 
   }
   
   .card {
-    flex: 1 1 30%; /* 3 cartes par ligne */
+    flex: 1 1 30%; 
     box-sizing: border-box;
     background-color: white;
     padding: 15px;
@@ -144,8 +192,130 @@ h1, h2, h3, h4 {
     border-radius: 5px;
   }
   
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; 
+    padding: 10px;
+  }
+
+  .card-header {
+    flex-direction: column;  
+    align-items: flex-start;  
+  }
+
+  .card h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  .see-openings {
+    padding: 8px 14px;
+    font-size: 0.9em; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 48%; 
+  }
+
+  .card-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card {
+    flex: 1 1 30%; 
+  }
+}
   .card p {
     font-size: 1em;
     color: #666;
+ 
+  }  
+  .brands__logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto; 
+    list-style: none;
+    gap: 20px; 
+    padding: 0; 
   }
   
+  .brands__logos li {
+    text-align: center; 
+  }
+  
+  .brands__logos img {
+    width: 90px; 
+    height: auto; 
+  }
+  
+  .brands__logos a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none; 
+  }  
+  @media (max-width: 768px) {
+    .brands__logos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .brands__logos {
+      grid-template-columns: 1fr;
+    }
+    .brands__logos img {
+      width: 70px; 
+    }
+  }
+ .section3 {
+  display: flex;
+  h2{
+    font-size: 25px;
+    width: 250px;
+  }
+ }
+ .Title-custom-4 {
+  padding-top: 50px;
+ }
+.Button2{
+  background-color: #1e88e5;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+.footer {
+  padding: 30px;
+  text-align: center; 
+  font-family: Arial, sans-serif;
+}
+
+.footer .footer-content {
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #ccc; 
+}
+
+.footer-rights {
+  font-size: 10px;
+  color: #ccc;
+}
+
+.footer-link {
+  color: #0073e6; 
+  text-decoration: none; 
+}
+
+.footer-link:hover {
+  text-decoration: underline; 
+}
